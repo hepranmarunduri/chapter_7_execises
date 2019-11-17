@@ -1,4 +1,4 @@
-Hi, I am Hepran.
+Hi, I am Hepran Marunduri.
 I am learning python language now.
 I am learning python from a book.
 The book is Python Crash Course 2nd edition (pcc2) by Eric Matthes.
