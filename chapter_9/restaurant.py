@@ -1,23 +1,27 @@
 class Restaurant:
-    """Models a restaurant."""
-    def __init__(self, restaurant_name, cuisine_type):
-        self.restaurant_name = restaurant_name                  # Attribut 1
-        self.cuisine_type = cuisine_type                        # Attribut 2
-
-    def describe_restaurant(self):                              # Method 1
-        """Displays some informations of the restaurant."""
-        print(f"{self.restaurant_name} serves {self.cuisine_type} foods.")
-
-    def open_restaurant(self):                                  # Method 2
-        """Indicates the restaurant is opening."""
-        print(f"{self.restaurant_name} is {self.open_restaurant}.")
-
-# Instance
-restaurant = Restaurant('RM Lamun Gelombang', 'minang')
-
-print(f"The restaurant's name is {restaurant.restaurant_name}.")
-print(f"It serves {restaurant.cuisine_type} foods.")
-
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
+    """Class models a restaurant."""
+    
+    def __init__(self, restaurant_name, restaurant_type):
+        self.restaurant_name = restaurant_name
+        self.restaurant_type = restaurant_type
         
+    def describe_restaurant(self):
+        """Method shows the resto's info. ds = describe restaurant."""
+        ds = f"{self.restaurant_name.title()} serves {self.restaurant_type} "
+        ds += "food."
+        print(ds)
+        
+    def open_restaurant(self):
+        """Method indicates the resto's open."""
+        print(f"{self.restaurant_name.title()} is open!")
+        
+        
+restaurant = Restaurant('theresto', 'minang')
+
+# Print the 2 attributes individually.
+print(resto.restaurant_name)
+print(resto.restaurant_type)
+
+# Call both methods.
+resto.describe_restaurant()
+resto.open_restaurant()
