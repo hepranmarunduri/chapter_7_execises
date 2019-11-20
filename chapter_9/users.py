@@ -1,33 +1,34 @@
-class User:
-    """Model a user"""
+class User():
+    """Class models a user profile."""
+    
     def __init__(
-        self, first_name, last_name,
-        favorite_manga, favorite_anime
-        ):
+                self,
+                first_name, last_name,
+                department, faculty
+                ):
         self.first_name = first_name
         self.last_name = last_name
-        self.favorite_manga = favorite_manga
-        self.favorite_anime = favorite_anime
-
+        self.department = department
+        self.faculty = faculty
+        
     def describe_user(self):
-        describer = f"You, {self.first_name.title()} {self.last_name.title()},"
-        describer += f" likes {self.favorite_manga.title()} (manga) "
-        describer += f"and {self.favorite_anime.title()} (anime).\n"
-
-        print(describer)
-
+        """Prints a summary of the user. du = describe user"""
+        full_name = f"{self.first_name.title()}{self.last_name.title()}"
+        
+        du = f"{full_name} is a student of {self.department}, {self.faculty}.\n"
+        print(du)
+        
     def greet_user(self):
-        print(f"Hi {self.first_name.title()} {self.last_name.title()}!")
+        """Prints a personalized greeting to the user."""
+        full_name = f"{self.first_name.title()}{self.last_name.title()}"
+        print(f"Hi, {full_name}!")
+        
+        
+hm = User('h', 'm', 'economics', 'economy')
+fm = User('f', 'm', 'philosophy', 'philosophy')
 
-cs = User('computer', 'scientist', 'komi-san', 'hotaru no haka')
-duende = User('tener', 'duende', 'angel densetsu', 'tonari no totoro')
-runningman = User('running', 'man', 'one punch man', 'boku no hero academia')
+hm.greet_user()
+hm.describe_user()
 
-cs.greet_user()
-cs.describe_user()
-
-duende.greet_user()
-duende.describe_user()
-
-runningman.greet_user()
-runningman.describe_user()
+fm.greet_user()
+fm.describe_user()
