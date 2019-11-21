@@ -1,54 +1,66 @@
-# Start from restaurant.py.
-# Add a new attribute (number_served) with default value 0.
 class Restaurant:
-    """Models a restaurant."""
-    def __init__(self, restaurant_name, cuisine_type):
+    """Starts from restaurant.py."""
+    
+    def __init__(self, restaurant_name, restaurant_type):
+        """Add attribute number_served that have default value 0."""
         self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type 
+        self.restaurant_type = restaurant_type
         self.number_served = 0
-
+        
     def describe_restaurant(self):
-        """Displays some informations of the restaurant."""
-        print(f"{self.restaurant_name} serves {self.cuisine_type} foods.")
-
+        """
+        Method shows the resto's info.
+        ds = describe restaurant.
+        """
+        ds = f"{self.restaurant_name.title()} serves {self.restaurant_type} "
+        ds += "food."
+        print(ds)
+        
     def open_restaurant(self):
-        """Indicates the restaurant is opening."""
-        print(f"{self.restaurant_name} is {self.open_restaurant}.")
-
-    def display_served_customers(self):
+        """Method indicates the resto's open."""
+        print(f"{self.restaurant_name.title()} is open!")
+        
+    def set_number_served(self, served_customers):
         """
-        Display no. of customers have been served.
-        dsc = display no. customers
+        Add method set_number_served() to set the numbers of, customers who's
+        been served.
+        sns = set no. served
         """
-        dsc = f"The no. of customers for today are {self.number_served}."
-        return dsc
+        self.number_served = served_customers
+        sns = "The number of customers has served are "
+        sns += f"{self.number_served}."
+        
+        return sns
+        
+    def increment_number_served(self, today_customers):
+        """
+        Add method increment_number_served() to increment, the no. of
+        customers who's been served.
+        """
+        self.number_served += today_customers
+        sns = "The number of customers has served are "
+        sns += f"{self.number_served}."
+        
+        return sns
+        
+# Create an instance from the class.  
+restaurant = Restaurant('theresto', 'minang')
 
-    def set_number_served(self):
-        """Set the number of customers who's been served."""
-        self.number_served = 100
+print(restaurant.restaurant_name.title())
+print(restaurant.restaurant_type)
 
-        # ns - no. served
-        ns = f"There are {self.number_served} customers for today."
-        print(ns)
+# Print the no. of customers the restaurant has served.
+# Expected output: 0 customers.
+print(f"\nThe number of customers has served are {restaurant.number_served}.\n")
 
-    def increment_number_served(self, new_number_served):
-        """Increments the no. of customers who's been served."""
-        self.number_served += new_number_served
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+print("")
 
-        # ins = increment no. served
-        ins = f"There are {self.number_served} customers for today."
-        print(ins)
+# Call the method with new number and print the value
+print(restaurant.set_number_served(80))
+print(restaurant.set_number_served(90))
 
-
-# Create an instance (restaurant).
-restaurant = Restaurant('rm lamun gelombang', 'minang')
-
-# Show the no. of customers the restaurant has served.
-restaurant.number_served = 22
-print(restaurant.display_served_customers())
-
-# Call set_number_served() method and print the value.
-restaurant.set_number_served()
-
-# Represent how many customers were served in.
-restaurant.increment_number_served(8)
+# Call the method to represent how many customers were served in.
+# Expected output: 100 customers.
+print(restaurant.increment_number_served(10))
