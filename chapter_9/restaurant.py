@@ -19,9 +19,9 @@ class Restaurant:
 restaurant = Restaurant('theresto', 'minang')
 
 # Print the 2 attributes individually.
-print(resto.restaurant_name)
-print(resto.restaurant_type)
+print(restaurant.restaurant_name)
+print(restaurant.restaurant_type)
 
 # Call both methods.
-resto.describe_restaurant()
-resto.open_restaurant()
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
