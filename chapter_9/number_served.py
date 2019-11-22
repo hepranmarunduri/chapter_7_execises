@@ -1,23 +1,19 @@
 class Restaurant:
     """Starts from restaurant.py."""
-    
     def __init__(self, restaurant_name, restaurant_type):
-        """Add attribute number_served that have default value 0."""
+        """Add attribute number_served that has default value 0."""
         self.restaurant_name = restaurant_name
         self.restaurant_type = restaurant_type
         self.number_served = 0
         
     def describe_restaurant(self):
-        """
-        Method shows the resto's info.
-        ds = describe restaurant.
-        """
+        """Shows the resto's info. ds = describe restaurant."""
         ds = f"{self.restaurant_name.title()} serves {self.restaurant_type} "
         ds += "food."
         print(ds)
         
     def open_restaurant(self):
-        """Method indicates the resto's open."""
+        """Indicates that the resto's open."""
         print(f"{self.restaurant_name.title()} is open!")
         
     def set_number_served(self, served_customers):
@@ -27,9 +23,9 @@ class Restaurant:
         sns = set no. served
         """
         self.number_served = served_customers
+
         sns = "The number of customers has served are "
         sns += f"{self.number_served}."
-        
         return sns
         
     def increment_number_served(self, today_customers):
@@ -38,10 +34,11 @@ class Restaurant:
         customers who's been served.
         """
         self.number_served += today_customers
+
         sns = "The number of customers has served are "
         sns += f"{self.number_served}."
-        
         return sns
+        
         
 # Create an instance from the class.  
 restaurant = Restaurant('theresto', 'minang')
