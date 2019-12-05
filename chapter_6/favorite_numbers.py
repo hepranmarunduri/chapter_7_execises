@@ -1,8 +1,7 @@
 """
-Use a dictionary to store people’s favorite numbers. Think of five names, and 
-use them as keys in your dictionary. Think of a favorite number for each 
-person, and store each as a value in your dictionary. Print each person’s name 
-and their favorite number.
+Modify your program from Exercise 6-2 so each person can have more than one 
+favorite number. Then print each person’s name along with their 
+favorite numbers.
 """
 
 favorite_numbers = {
