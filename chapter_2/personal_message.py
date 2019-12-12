@@ -1,8 +1,4 @@
-"""
-Use a variable to represent a person’s name, and print a message to that 
-person. Your message should be simple, such as, “Hello Eric, would you like to 
-learn some Python today?”
-"""
+# Assign a name to a variable and print a message to that name.
 
-name = "Pythonboy"
-print(f"Hello {name}, would you like to learn some python?")
+name = "modokashii omoi"
+print(f"I listen to {name.title()}.")

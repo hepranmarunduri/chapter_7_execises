@@ -1,11 +1,5 @@
-"""
-Assign a message to a variable, and print that message.
-Then change the value of the variable to a new message, 
-and print the new message.
-"""
-
-python_ver = "python 3"
+python_ver = "python 2"
 print(python_ver)
 
-python_ver = "not python 3"
+python_ver = "python 3"
 print(python_ver)
