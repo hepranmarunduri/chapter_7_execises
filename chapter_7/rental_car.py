@@ -1,6 +1,5 @@
-# It's exercise 7-1.
-# A program to ask user car choice
+# Ask user what kind of rental car he/she likes. 
+# And print a message about that car.
+car = input("What kind of car would you like? ")
 
-car = input("What brand of car do you want? ")
-
-print(f"Okay. Let me see if I can find a {car} car for you.")
+print(f"\nLet me see if I can find you a {car.title()}.")

@@ -1,10 +1,11 @@
-# Exercise 7-2.
-# A program to tell user for seat availability.
+# Ask a user how many people are in his/her dinner group.
+# If the people < 8, the table is ready.
+# Otherwise, no.
 
-seat = input("How many seat do you need? ")
-seat = int(seat)
+message = input("How many people are in your dinner group? ")
+people = int(message)
 
-if seat <= 8:
-    print("\nThe table is available for you.")
+if people > 8:
+    print("\nSorry, you'll have to wait for a table.")
 else:
-    print("\nSorry, you will need to wait.")
+    print("\nA table is available fo you!")

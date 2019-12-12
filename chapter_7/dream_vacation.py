@@ -1,7 +1,6 @@
-# Exercise 7-10
-# A program to ask someone's dream vacation place.
+# Polls users about their dream vacation places
 
-# This dictionary is for storing user's answers.
+# This empty dictionary is for storing user's answers.
 user_answers = {}
 
 while True:
@@ -15,7 +14,9 @@ while True:
     user_answers[name] = answer
 
     # If the answer is no, the while loop exits.
-    next_polling = input("Do you want another person to join the polling? (yes/no) ")
+    next_polling = input("Do you want another person "
+                        "to join the polling? (yes/no) ")
+
     if next_polling == 'no':
         print("Thanks for your participation.")
         break

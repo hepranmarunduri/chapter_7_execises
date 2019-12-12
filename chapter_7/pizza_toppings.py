@@ -1,7 +1,7 @@
-# Exercise 7-4
-
+# Always ask a user to enter a series of pizza toppings
+# until he/she enter a 'quit' value.
 prompt = "\nPlease enter your pizza topping:"
-prompt += "\n(Enter 'quit' if you finish.) " # q means quit.
+prompt += "\n(Enter 'quit' if you finish.) "
 
 while True:
     topping = input(prompt)

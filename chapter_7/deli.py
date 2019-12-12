@@ -1,9 +1,8 @@
-# Exercise 7-8
-# A program to print finished sandwiches.
+# See page 127 for detail instruction.
 
-# The ordered sandwiches.
 sandwich_orders = ['tuna', 'cheese', 'extra cheese', 'chicken']
-# It is empty because no ordered sandwiches finish.
+
+# It is empty because no sandwich orders finish.
 finished_sandwiches = []
 
 while sandwich_orders:

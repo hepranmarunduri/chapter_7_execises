@@ -1,3 +1,5 @@
+# See page 124 for detail instruction.
+
 # # The conditional test will stop the while loop.
 # prompt = "\nPlease enter your age:"
 # prompt += "\n(Enter 'q' if you finish.) "
