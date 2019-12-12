@@ -1,9 +1,4 @@
-"""
-Use a dictionary to store information about a person you know. Store their 
-first name, last name, age, and the city in which they live. You should have 
-keys such as first_name, last_name, age, and city. Print each piece of 
-information stored in your dictionary.
-"""
+# See page 99 for detail instruction.
 
 sm = {
     'first_initial': 's',
@@ -12,11 +7,10 @@ sm = {
     'city': 'padang',
     }
 
-print(f"SM's first name initial is {sm['first_initial'].title()}. "
-    f"His last name initial is {sm['last_initial'].title()}.\n"
-    f"He was born in {sm['birth']}. "
-    f"Now, he lives at {sm['city'].title()}.")
+# msg shorts of message
+msg = f"His initial name is {sm['first_initial']}.\n"
+msg += f"His last name initial is {sm['last_initial']}.\n"
+msg += f"He was born in {sm['birth']}.\n"
+msg += f"Now, he lives at {sm['city'].title()}.\n"
 
-# Expected output:
-# SM's first name initial is S. His last name initial is M.
-# He was born in 1964. Now, he lives at Padang.
+print(msg)

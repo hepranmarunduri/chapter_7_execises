@@ -1,4 +1,4 @@
-# See page 105 for instruction.
+# See page 105 for detail instruction.
 
 users = {
     'jen': 'python',
@@ -7,7 +7,6 @@ users = {
     'phil': 'python',
     }
 
-# Make a list of junior developers
 junior_developers = ['thomz', 'jen', 'phil', 'ranchu', 'goele']
 
 for junior_developer in junior_developers:
@@ -15,4 +14,5 @@ for junior_developer in junior_developers:
         print(f"Thank you for your participation, {junior_developer.title()}!")
     else:
         print(f"{junior_developer.title()}, would you like to participate in our poll?")
+    
     print("")
