@@ -1,45 +1,27 @@
-"""
-You just found a bigger dinner table, so now more space is available. Think of 
-three more guests to invite to dinner.
-- Start with your program from Exercise 3-4 or Exercise 3-5. Add a print()
-call to the end of your program informing people that you found a bigger
-dinner table.
-- Use insert() to add one new guest to the beginning of your list.
-- Use insert() to add one new guest to the middle of your list.
-- Use append() to add one new guest to the end of your list.
-- Print a new set of invitation messages, one for each person in your list.
-"""
+# I found bigger table, so I will invite more people.
+# Print invitation to each invited person.
 
-guests = ['s', 'r', 'f']
-invitation_message = "Could you come to my dinner, "
+guests = ['sm', 'rt', 'fsm']
+invitation_message = "would u like to have dinner with me"
 
-print(f"{invitation_message}{guests[0].title()}?")
-print(f"{invitation_message}{guests[1].title()}?")
-print(f"{invitation_message}{guests[2].title()}?")
+print(f"{guests[0]}, {invitation_message}?")
+print(f"{guests[1]}, {invitation_message}?")
+print(f"{guests[2]}, {invitation_message}?")
 
-# Show a guest can not come and change the guest.
-print(f"\n{guests[1].title()} can not come to the dinner.\n")
-guests[1] = 't'
+print("\nI found a bigger table. So, I will invite more people.\n")
 
-# Print new invitations
-print(f"{invitation_message}{guests[0].title()}?")
-print(f"{invitation_message}{guests[1].title()}?")
-print(f"{invitation_message}{guests[2].title()}?")
+# Add new guest to the beginning of 'guest' list.
+guests.insert(0, 'pth')
 
-print("\nHi everyone, I just found a bigger table. "
-    "So, I let another to join.\n")
+# Add new guest to the middle of the list.
+guests.insert(2, 'tsty')
 
-# New guest at the beginning of the list
-guests.insert(0, 'p')
-# New guest at the middle
-guests.insert(2, 'pth')
-# New guest at the end
-guests.append('ktt')		#So, I have 6 guests now.
+# Add new guest to the end of the list.
+guests.append('ktt')
 
-# New invitations
-print(f"{invitation_message}{guests[0].title()}?")
-print(f"{invitation_message}{guests[1].title()}?")
-print(f"{invitation_message}{guests[2].title()}?")
-print(f"{invitation_message}{guests[3].title()}?")
-print(f"{invitation_message}{guests[4].title()}?")
-print(f"{invitation_message}{guests[5].title()}?")
+print(f"{guests[0]}, {invitation_message}?")
+print(f"{guests[1]}, {invitation_message}?")
+print(f"{guests[2]}, {invitation_message}?")
+print(f"{guests[3]}, {invitation_message}?")
+print(f"{guests[4]}, {invitation_message}?")
+print(f"{guests[5]}, {invitation_message}?")
