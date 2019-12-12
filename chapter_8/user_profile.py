@@ -5,10 +5,10 @@ def build_profile(first, last, **user_info):
     
     return user_info
 
-
-user_profile = build_profile('hepran', 'marunduri',
-                            favorite_language='python',
-                            favorite_food="father's bread",
-                            favorite_drink='milk')
+user_profile = build_profile(
+                        'h', 'm',
+                        favorite_language='python',
+                        favorite_food="father's bread",
+                        favorite_drink='milk')
 
 print(user_profile)

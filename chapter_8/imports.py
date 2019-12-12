@@ -1,4 +1,6 @@
-# import module_name
+# Import a function in different ways.
+
+# Format 1: import module_name
 import album_function
 print(album_function.make_album('a7x', 'avenged sevenfold'))
 

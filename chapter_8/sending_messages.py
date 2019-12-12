@@ -7,21 +7,21 @@ def send_messages(messages, sent_messages):
         for message in messages:
             print(f"- {message.title()}.")
             print("Sending message...\n")
-
             send_message = messages.pop()
+            
             sent_messages.append(send_message)
 
 
-messages = ['python', 'java', 'c++', 'kotlin', 'c', 'go', 'php']
+languages = ['python', 'java', 'c++', 'kotlin', 'c', 'go', 'php']
+
 sent_messages = []
 
 print("Before:")
-print(messages)
+print(languages)
 print(f"{sent_messages}\n")
 
-# THE FUNCTION CALL.
-send_messages(messages, sent_messages)
+send_messages(languages, sent_messages)
 
 print("After:")
-print(f"{messages}")
+print(f"{languages}")
 print(sent_messages)

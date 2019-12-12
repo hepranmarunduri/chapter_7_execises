@@ -1,6 +1,10 @@
 def city_country(city, country='indonesia'):
-    """Returns a string like 'Padang, Indonesia'."""
+    """
+    Return a string formatted like this:
+    "City, Country"
+    """
     return f"{city.title()}, {country.title()}"
+
 
 print(city_country('padang'))
 print(city_country('surabaya'))

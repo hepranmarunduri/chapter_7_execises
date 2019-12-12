@@ -13,7 +13,8 @@ def car_info(manufacturer, model, **options):
 
     return car_info_dict
 
+
 car_info_variable = car_info('toyota', 'fortuner',
-                                color='black')
+                            color='black')
 
 print(car_info_variable)
