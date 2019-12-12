@@ -1,70 +1,50 @@
 class User():
-    """Class models a user profile."""
-    def __init__(
-            self, first_name, last_name,
-            department, faculty, login_attempts
-            ):
-        """Add an attributes (login_attempts)."""
+    """Models a user with its information."""
+    def __init__(self, first_name, last_name, favorite_manga, login_attempts):
         self.first_name = first_name
         self.last_name = last_name
-        self.department = department
-        self.faculty = faculty
+        self.favorite_manga = favorite_manga
+        self.full_name = f"{first_name} {last_name}"
         self.login_attempts = login_attempts
-        
+
     def describe_user(self):
-        """Prints a summary of the user. du = describe user"""
-        full_name = f"{self.first_name.title()}{self.last_name.title()}"
-        
-        du = f"{full_name} is a student of {self.department}, {self.faculty}.\n"
-        print(du)
-        
+        """Displays a summary of user's information."""
+        print(f"{self.full_name.title()} likes {self.favorite_manga}.\n")
+
     def greet_user(self):
-        """Prints a personalized greeting to the user."""
-        full_name = f"{self.first_name.title()}{self.last_name.title()}"
-        print(f"Hi, {full_name}!")
-        
+        """Greets user."""
+        print(f"Hello {self.full_name.title()}.")
+
     def increment_login_attempts(self):
-        """
-        Write a method that increments the value of, login_attempts by 1.
-        """
+        """Increments the value of login_attempts by 1."""
         self.login_attempts += 1
         return self.login_attempts
-        
+
     def reset_login_attempts(self):
-        """
-        Write another method that resets the value of, login_attempts to 0. ()
-        """
+        """Resets the value of login attempts to 0."""
         self.login_attempts = 0
         return self.login_attempts
-
+        
 
 class Admin(User):
-    """Models an admin who is a special type of user."""
-    def __init__(
-            self, first_name, last_name,
-            department, faculty, login_attempts
-            ):
-        """Admin has privileges that separates from other user."""
-        super().__init__(
-                    first_name, last_name, department,
-                    faculty, login_attempts
-                    )
-        self.department = department
-        self.faculty = faculty
-        self.login_attempts = login_attempts
-        self.privileges = ('can add post', 'can delete post', 'can ban user')
+    """Models a special user: admin."""
+    def __init__(self, first_name, last_name, favorite_manga, login_attempts,
+                privileges):
+
+        super().__init__(first_name, last_name, favorite_manga, login_attempts)
+    
+        self.privileges = privileges
 
     def show_privileges(self):
-        """Shows all admin's privileges."""
-        print(f"Hi Admin. These are your privileges:")
-        privileges = self.privileges
-        for privilege in privileges:
-            print(f"- You {privilege}.")
+        """Display all privileges."""
+        print("Admin's privileges:")
 
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+            
 
-# Because I don't think an admin is not from any department & faculty, also
-# doesn't need to count its login attempt, I just assign the needed arguments
-# as shown below.
-admin = Admin('the', 'admin', None, None, None)
+admin_privileges = ['can add post', 'can delete post', 'can ban user']
+
+admin = Admin('the', 'admin', 'lookism', None, admin_privileges)
 
 admin.show_privileges()

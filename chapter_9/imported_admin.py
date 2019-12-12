@@ -1,8 +1,10 @@
-# Work with a module that has multiple class.
-# And prove the imported module works.
+from privileges import *
 
-import module_admin
-
-admin = module_admin.Admin('admin', None, None, None, None)
+admin = Admin(None, None, None, None, None)
 
 admin.admin_privileges.show_privileges()
+
+# Note:
+# There will be a double outputs.
+# It happens because in the module (privileges.py) there's some lines of code 
+# that calls show_privileges() method.

@@ -1,42 +1,33 @@
-class Restaurant:
-    """Class models a restaurant."""
-    def __init__(self, restaurant_name, restaurant_type):
+class Restaurant():
+    """Models a restaurant."""
+    def __init__(self, restaurant_name, cuisine_type):
         self.restaurant_name = restaurant_name
-        self.restaurant_type = restaurant_type
-        
+        self.cuisine_type = cuisine_type
+
     def describe_restaurant(self):
-        """Method shows the resto's info. ds = describe restaurant."""
-        ds = f"{self.restaurant_name.title()} serves {self.restaurant_type} "
-        ds += "food."
-        print(ds)
-        
+        """Displays restaurant name & its cuisine type."""
+        print(f"{self.restaurant_name.title()} serves {self.cuisine_type}.")
+
     def open_restaurant(self):
-        """Method indicates the resto's open."""
-        print(f"{self.restaurant_name.title()} is open!")
+        """Displays the restaurant is open."""
+        print(f"{self.restaurant_name.title()} is open.")
+
 
 class IceCreamStand(Restaurant):
-    """Models an ice cream stand that a part of the restaurant."""
-    def __init__(self, restaurant_name, restaurant_type):
-        """
-        The stand offers several ice cream flavors.
-        NOTE: The 'restaurant_name & restaurant_type' are a must included
-        parameters in parent & child init methods.
-        """
-        super().__init__(restaurant_name, restaurant_type)
-        self.flavors = ('choco', 'durian', 'strawberry','vanilla')
+    """Ice cream stand is a specific kind of restaurant."""
+    def __init__(self, restaurant_name, cuisine_type, flavors):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = flavors
 
-    def display_flavors(self):
-        """Display each ice cream flavors. msg shorts for message."""
-        msg = f"Besides {icecream_stand.restaurant_type} culinary, "
-        msg += f"{icecream_stand.restaurant_name.title()} also has an ice "
-        msg += f"cream stand.\nThe stand offers several ice cream flavors, "
-        msg += "which are:"
-        
-        print(msg)
-        for flavor in self.flavors:
-            print(f"- {flavor.title()}")
+    def display_ice_cream_flavors(self):
+        """Display the ice cream flavors in the list."""
+        print("Ice cream flavors:")
+        for ice_cream_flavor in self.flavors:
+            print(f"- {ice_cream_flavor.title()}")
+            
 
+flavors_list = ['yakult', 'oreo', 'durian', 'vanilla']
 
-icecream_stand = IceCreamStand('theresto', 'minang')
+flavor = IceCreamStand('eskrim', 'ice cream', flavors_list)
 
-icecream_stand.display_flavors()
+flavor.display_ice_cream_flavors()

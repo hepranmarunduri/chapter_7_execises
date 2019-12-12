@@ -1,8 +1,6 @@
-# Work with a module that has a class.
-# Prove the imported module works.
+from restaurant import Restaurant
 
-from restaurant_2 import Restaurant
+restaurant = Restaurant('thisisarestaurant', 'minang')
 
-restaurant = Restaurant('theresto', 'minang')
-
+print("")
 restaurant.describe_restaurant()

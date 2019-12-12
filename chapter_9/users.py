@@ -1,29 +1,29 @@
 class User():
-    """Models a user profile."""
-    def __init__(self, first_name, last_name, department, faculty):
+    """Models a user with its information."""
+    def __init__(self, first_name, last_name, favorite_manga):
         self.first_name = first_name
         self.last_name = last_name
-        self.department = department
-        self.faculty = faculty
-        
+        self.favorite_manga = favorite_manga
+        self.full_name = f"{first_name} {last_name}"
+
     def describe_user(self):
-        """Prints a summary of the user. du = describe user"""
-        full_name = f"{self.first_name.title()}{self.last_name.title()}"
-        
-        du = f"{full_name} is a student of {self.department}, {self.faculty}.\n"
-        print(du)
-        
+        """Displays a summary of user's information."""
+        print(f"{self.full_name.title()} likes {self.favorite_manga}.\n")
+
     def greet_user(self):
-        """Prints a personalized greeting to the user."""
-        full_name = f"{self.first_name.title()}{self.last_name.title()}"
-        print(f"Hi, {full_name}!")
+        """Greets user."""
+        print(f"Hello {self.full_name.title()}.")
         
-        
-hm = User('h', 'm', 'economics', 'economy')
-fm = User('f', 'm', 'philosophy', 'philosophy')
 
-hm.greet_user()
-hm.describe_user()
+user_1 = User('masashi', 'kishimoto', 'naruto')
+user_2 = User('eiichiro', 'oda', 'one piece')
+user_3 = User('tamura', 'yumi', '7 seeds')
 
-fm.greet_user()
-fm.describe_user()
+user_1.greet_user()
+user_1.describe_user()
+
+user_2.greet_user()
+user_2.describe_user()
+
+user_3.greet_user()
+user_3.describe_user()

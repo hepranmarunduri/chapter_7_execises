@@ -1,8 +1,11 @@
 # Work with multiple modules.
 # Prove the work works.
+import privileges_module
+import admin_module
 
-import admin_privileges
+admin = admin_module.Admin('admin', None, None, None, None)
 
-admin = admin_privileges.Admin('admin', None, None, None, None)
+print(f"To {admin.first_name.title()}")
 
-admin.admin_privileges.show_privileges()
+privileges = privileges_module.Privileges()
+privileges.show_privileges()

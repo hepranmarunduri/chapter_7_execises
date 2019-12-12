@@ -1,27 +1,22 @@
-class Restaurant:
-    """
-    The program uses Class Restaurant from restaurant.py
-    Models a Restaurant."""
-    def __init__(self, restaurant_name, restaurant_type):
+class Restaurant():
+    """Models a restaurant."""
+    def __init__(self, restaurant_name, cuisine_type):
         self.restaurant_name = restaurant_name
-        self.restaurant_type = restaurant_type
-        
-    def describe_restaurant(self):
-        """Shows the resto's info. ds = describe restaurant."""
-        ds = f"{self.restaurant_name.title()} serves {self.restaurant_type} "
-        ds += "food."
-        print(ds)
-        
-    def open_restaurant(self):
-        """Indicates that the resto's open."""
-        print(f"{self.restaurant_name.title()} is open!")
-        
-# Create 3 different instances
-lamun_gelombang = Restaurant('RM Lamun Gelombang', 'minang')
-afoodrica = Restaurant('Afoodrica Restaurant', 'african')
-eurofood = Restaurant('Euroofood Resto', 'western')
+        self.cuisine_type = cuisine_type
 
-# Call describe_restaurant() for each instance.
-afoodrica.describe_restaurant()
-lamun_gelombang.describe_restaurant()
-eurofood.describe_restaurant()
+    def describe_restaurant(self):
+        """Displays restaurant name & its cuisine type."""
+        print(f"{self.restaurant_name.title()} serves {self.cuisine_type}.")
+
+    def open_restaurant(self):
+        """Displays the restaurant is open."""
+        print(f"{self.restaurant_name.title()} is open.")
+        
+
+restaurant = Restaurant('canteen', 'prasmanan')
+cat = Restaurant('cat cafe', 'food for cat')
+gold_fish = Restaurant('gold fishy', 'food for fish')
+
+restaurant.describe_restaurant()
+cat.describe_restaurant()
+gold_fish.describe_restaurant()

@@ -1,5 +1,5 @@
 class User():
-    """Class models a user profile."""
+    """Models a user profile."""
     def __init__(
             self, first_name, last_name,
             department, faculty, login_attempts
@@ -37,6 +37,7 @@ class User():
         self.login_attempts = 0
         return self.login_attempts
 
+
 class Privileges():
     """Models a list of privileges"""
     def __init__(self):
@@ -48,7 +49,7 @@ class Privileges():
         privileges = self.privileges
         for privilege in privileges:
             print(f"- You {privilege}.")
-
+            
 
 class Admin(User):
     """Models an admin who is a special type of user."""
@@ -61,6 +62,8 @@ class Admin(User):
                     first_name, last_name, department,
                     faculty, login_attempts
                     )
+        self.first_name = first_name
+        self.last_name = last_name
         self.department = department
         self.faculty = faculty
         self.login_attempts = login_attempts
@@ -71,5 +74,3 @@ class Admin(User):
 admin = Admin('the', 'admin', None, None, None)
 
 admin.admin_privileges.show_privileges()
-
-    
