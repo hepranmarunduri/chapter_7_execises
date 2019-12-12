@@ -1,24 +1,17 @@
-"""
-Start with your program from Exercise 4-1 (page 56). Make a copy of the list of
-pizzas, and call it friend_pizzas. Then, do the following:
-- Add a new pizza to the original list.
-- Add a different pizza to the list friend_pizzas.
-- Prove that you have two separate lists. Print the message My favorite
-pizzas are:, and then use a for loop to print the first list. Print the message
-My friend’s favorite pizzas are:, and then use a for loop to print the second 
-list. Make sure each new pizza is stored in the appropriate list.
-"""
+# See page 65 for detail instruction.
 
-pizzas = ['pizza 1', 'pizza 2', 'pizza 3']
-friend_pizzas = pizzas[:] # This makes a copy of pizzas list.
+pizzas_from_pizza_hut = ['pepperoni signature', 'splitza signature', 
+                    'meat lovers'
+                    ]
+friend_pizzas = pizzas_from_pizza_hut[:]
 
-pizzas.append('INI')
-friend_pizzas.append('ITU')
+pizzas_from_pizza_hut.append('this pizza')
+friend_pizzas.append('that pizza')
 
 print("My fav. pizzas:")
-for pizza in pizzas:
-	print(pizza)
+for pizza in pizzas_from_pizza_hut:
+	print(f"- {pizza}")
 
 print("\nFriend's fav. pizzas:")
-for friend_pizza in friend_pizzas:
-	print(friend_pizza)
+for pizza in friend_pizzas:
+    print(f"- {pizza}")

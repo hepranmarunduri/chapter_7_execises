@@ -1,6 +1,5 @@
-"""
-Make a list of the numbers from one to one million, and then use a for loop to print the numbers.
-"""
+# Make a list of numbers from 1 to 1_000_000.
+# Print the numbers inside the list.
 
 one_million = list(range(1, 1_000_001))
 
