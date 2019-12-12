@@ -1,10 +1,11 @@
 # See page 78 for detail instruction.
 
-# equality
+# Equality
 language = 'bahasa indonesia'
 print(language == 'bahasa indonesia') # True
 print(language == 'Bahasa Indonesia') # False
-# inequality
+
+# Inequality
 print(language != 'english') # True
 print(language != 'bahasa indonesia') # False
 print("")

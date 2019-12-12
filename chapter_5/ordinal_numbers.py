@@ -1,8 +1,5 @@
-"""
-Use an if - elif - else chain inside the loop to print the proper ordinal 
-ending for each number.
-See page 89 for detail instruction.
-"""
+# Use an if-elif-else chain inside the loop to print the proper ordinal 
+# ending for each number. See page 89 for detail instruction.
 
 numbers = list(range(1, 10))
 

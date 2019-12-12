@@ -1,9 +1,6 @@
-"""
-Make a list of five or more usernames, including the name 'admin'.
-Imagine you are writing code that will print a greeting to each user after they
-log in to a website. Loop through the list, and print a greeting to each user.
-See page 89 for detail instruction.
-"""
+# Create a list of several users including an admin for a website..
+# Simulate a greeting will appear every time a user logs in.
+# But an admin will have a special greeting.
 
 usernames = ['ROCK', 'Duende', 'Python', 'g i n', 'admin']
 

@@ -1,8 +1,5 @@
-"""
-Write a series of conditional tests.
-Print a statement describing each test and your prediction for the results of each test.
-See page 78 for detail instruction.
-"""
+# Print a statement describing each test and your prediction for
+# the results of each test.
 
 manga = 'naruto'
 print("Is manga Naruto?")
