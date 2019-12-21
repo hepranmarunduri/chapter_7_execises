@@ -1,0 +1,3 @@
+In python you can play guess the right number.
+In python you can save information as much as possible.
+In python you can model real world situations.
